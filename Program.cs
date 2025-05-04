@@ -31,6 +31,8 @@ app.MapControllerRoute(
 
 // app.MapRazorPages(); ← コメントアウトまたは削除！
 // これはテストコメントです
+// ブランチテスト中です
+
 
 
 app.Run();
