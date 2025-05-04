@@ -1,0 +1,26 @@
+# ビルド成果物（bin, obj フォルダ）
+bin/
+obj/
+
+# Visual Studio のユーザー設定ファイル
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# 自動生成されるデバッグ・ログ・一時ファイル
+*.pdb
+*.cache
+*.log
+*.tmp
+
+# 出力バイナリ・実行ファイル
+*.exe
+*.dll
+
+# その他プロジェクト一時ファイル
+*.csproj.FileListAbsolute.txt
+*.dbmdl
+
+# VSCode に関する個人設定（任意で除外）
+.vscode/
