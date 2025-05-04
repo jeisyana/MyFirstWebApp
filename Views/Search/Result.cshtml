@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "検索結果";
+    var departure = ViewBag.Departure as string;
+    var arrival = ViewBag.Arrival as string;
+    var date = ViewBag.TravelDate as string;
+    var count = ViewBag.Passengers as int?;
+}
+
+<link href="~/css/search.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <div class="text-center mb-4">
+            <h2><i class="bi bi-train-front"></i> 検索結果</h2>
+        </div>
+        <div class="mb-4">
+            <p><strong>出発駅:</strong> @departure</p>
+            <p><strong>到着駅:</strong> @arrival</p>
+            <p><strong>乗車日:</strong> @date</p>
+            <p><strong>人数:</strong> @count 人</p>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">列車名</th>
+                        <th scope="col">発車時刻</th>
+                        <th scope="col">到着時刻</th>
+                        <th scope="col">所要時間</th>
+                        <th scope="col">料金</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr>
+        <td>のぞみ101号</td>
+        <td>09:00</td>
+        <td>11:30</td>
+        <td>2時間30分</td>
+        <td>13,500円</td>
+        <td>
+            <form method="post" action="/Reservation/Select">
+                <input type="hidden" name="trainId" value="1" />
+                <button type="submit" class="btn btn-primary btn-sm">予約</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>ひかり505号</td>
+        <td>10:00</td>
+        <td>12:50</td>
+        <td>2時間50分</td>
+        <td>12,500円</td>
+        <td>
+            <form method="post" action="/Reservation/Select">
+                <input type="hidden" name="trainId" value="2" />
+                <button type="submit" class="btn btn-primary btn-sm">予約</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>こだま709号</td>
+        <td>08:30</td>
+        <td>12:30</td>
+        <td>4時間00分</td>
+        <td>10,800円</td>
+        <td>
+            <form method="post" action="/Reservation/Select">
+                <input type="hidden" name="trainId" value="3" />
+                <button type="submit" class="btn btn-primary btn-sm">予約</button>
+            </form>
+        </td>
+    </tr>
+</tbody>
+
+            </table>
+        </div>
+
+        <div class="text-center mt-3">
+            <a href="/Search/Index" class="btn btn-outline-secondary rounded-pill">検索に戻る</a>
+        </div>
+    </div>
+</div>

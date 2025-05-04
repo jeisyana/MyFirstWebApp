@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "予約完了";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container my-5 text-center">
+    <h2 class="text-success mb-4">予約が完了しました！</h2>
+    <p>以下の内容で予約を受け付けました。</p>
+
+    <div class="card shadow-sm mx-auto mt-4" style="max-width: 500px;">
+        <div class="card-body">
+            <h5 class="card-title">のぞみ101号</h5>
+            <p class="card-text">東京 → 新大阪</p>
+            <p class="card-text">出発：10:00 ／ 到着：12:30</p>
+            <p class="card-text">料金：13,870円</p>
+        </div>
+    </div>
+
+    <a href="/Search/Index" class="btn btn-outline-primary mt-4">トップに戻る</a>
+</div>

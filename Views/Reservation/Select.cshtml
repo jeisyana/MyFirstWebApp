@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "予約対象の選択";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">予約対象を選択</h2>
+
+    <table class="table table-hover shadow-sm">
+        <thead class="table-light">
+            <tr>
+                <th>発駅</th>
+                <th>着駅</th>
+                <th>列車名</th>
+                <th>出発時間</th>
+                <th>到着時間</th>
+                <th>料金</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- ダミーデータ -->
+            <tr>
+                <td>東京</td>
+                <td>新大阪</td>
+                <td>のぞみ101号</td>
+                <td>10:00</td>
+                <td>12:30</td>
+                <td>13,870円</td>
+                <td>
+                    <form asp-action="Confirm" method="post">
+                        <input type="hidden" name="trainId" value="1" />
+                        <button type="submit" class="btn btn-primary btn-sm">予約</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>東京</td>
+                <td>新大阪</td>
+                <td>ひかり501号</td>
+                <td>11:00</td>
+                <td>13:50</td>
+                <td>13,500円</td>
+                <td>
+                    <form asp-action="Confirm" method="post">
+                        <input type="hidden" name="trainId" value="2" />
+                        <button type="submit" class="btn btn-primary btn-sm">予約</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
