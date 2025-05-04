@@ -7756,11 +7756,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jeisyanayana3\\Desktop\\MyFirstWebApp\\MyFirstWebApp\\MyFirstWebApp\\MyFirstWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\jeisyanayana3\\.vscode\\local\\MyFirstWebApp\\MyFirstWebApp.csproj",
       "projectName": "MyFirstWebApp",
-      "projectPath": "C:\\Users\\jeisyanayana3\\Desktop\\MyFirstWebApp\\MyFirstWebApp\\MyFirstWebApp\\MyFirstWebApp.csproj",
+      "projectPath": "C:\\Users\\jeisyanayana3\\.vscode\\local\\MyFirstWebApp\\MyFirstWebApp.csproj",
       "packagesPath": "C:\\Users\\jeisyanayana3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jeisyanayana3\\Desktop\\MyFirstWebApp\\MyFirstWebApp\\MyFirstWebApp\\obj\\",
+      "outputPath": "C:\\Users\\jeisyanayana3\\.vscode\\local\\MyFirstWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jeisyanayana3\\AppData\\Roaming\\NuGet\\NuGet.Config"
