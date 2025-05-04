@@ -30,5 +30,7 @@ app.MapControllerRoute(
     pattern: "{controller=Top}/{action=Index}/{id?}");
 
 // app.MapRazorPages(); ← コメントアウトまたは削除！
+// これはテストコメントです
+
 
 app.Run();
