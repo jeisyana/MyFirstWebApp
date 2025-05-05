@@ -1,6 +1,33 @@
-- name: Deploy to Azure Web App
-  uses: azure/webapps-deploy@v3
-  with:
-    app-name: 'samleapp'
-    publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
-    package: .
+name: Build and deploy ASP.Net Core app to Azure Web App - samleapp
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+
+      - name: Build with dotnet
+        run: dotnet build --configuration Release
+
+      - name: Publish with dotnet
+        run: dotnet publish -c Release -o ./myapp
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: 'samleapp'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
+          package: ./myapp
